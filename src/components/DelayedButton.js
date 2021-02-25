@@ -15,6 +15,7 @@ class DelayedButton extends React.Component {
 
   handleClick = (e) => {
     // Update our state here...
+    e.persist()
     setTimeout(()=>{
         this.props.onDelayedClick(e)
     }, this.props.delay)
@@ -23,9 +24,7 @@ class DelayedButton extends React.Component {
 
   render() {
     return (
-      <div>
         <button onClick={this.handleClick}>DelayedButton</button>
-      </div>
     );
   }
 }

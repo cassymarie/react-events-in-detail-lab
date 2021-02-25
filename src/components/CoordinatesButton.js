@@ -15,16 +15,14 @@ class CoordinatesButton extends React.Component {
     // Update our state here...
    // this.setState({hasBeenClicked: true},() => console.log(this.state.hasBeenClicked))
 //    debugger
-   this.setState({onReceiveCoordinates: [e.clientX, e.clientY]},() => console.log(this.state.onReceiveCoordinates))
+    this.props.onReceiveCoordinates([e.clientX, e.clientY])
     
     
   };
 
   render() {
     return (
-      <div>
-        <button onClick={this.handleClick}>CoordinatesButton</button>
-      </div>
+        <button onClick={this.handleClick}>Coords</button>
     );
   }
 }
